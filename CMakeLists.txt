@@ -42,7 +42,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 # Targets (client|server)
 foreach(_target
-  client server)
+async_client_unary_grpc async_server_unary_grpc)
   add_executable(${_target} "${_target}.cc"
     ${hw_proto_srcs}
     ${hw_grpc_srcs})
